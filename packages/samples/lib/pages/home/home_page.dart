@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfire_samples/controllers/utils/scaffold_messanger_controller.dart';
+import 'package:flutterfire_samples/pages/fifth/fifth_page.dart';
 import 'package:flutterfire_samples/pages/second/second_page.dart';
 import 'package:flutterfire_samples/pages/third/third_page.dart';
 import 'package:provider/provider.dart';
@@ -63,13 +64,19 @@ class _HomePageState extends State<HomePage> {
                       content: const Text('SecondPage から HomePage に戻るときに表示するアラートダイアログです。'),
                     );
               },
-              child: const Text('Go to SecondPage'),
+              child: const Text('Go to 2nd Page'),
             ),
             ElevatedButton(
               onPressed: () async {
                 await Navigator.pushNamed<void>(context, ThirdPage.path);
               },
-              child: const Text('Go to ThirdPage'),
+              child: const Text('Go to 3rd Page'),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                await Navigator.pushNamed<void>(context, FifthPage.path);
+              },
+              child: const Text('Go to 5th Page'),
             ),
           ],
         ),
