@@ -14,11 +14,6 @@ class FifthPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () async {
-            // await Navigator.pushNamedAndRemoveUntil(
-            //   context,
-            //   AnimationPage.path,
-            //   (route) => route.isFirst,
-            // );
             await Navigator.pushNamed(context, AnimationPage.path);
           },
           child: const Text('Show Animation and go back to HomePage'),
